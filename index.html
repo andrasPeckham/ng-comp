@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NG háziverseny</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/NG_logos/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="outer-container">
+        <div class="sidebar">
+            <div class="settings">
+                <div class="info">
+                    <h2 class="white time-paragraph">Time</h2>
+                    <div class="time">
+                        <div class="time">
+                            <p class="white">Minutes:</p>
+                            <input id="minute-input" type="number" class="time-input" value="5" min="0" max="99" onchange="changeCountdownValues()">
+                        </div>
+                        <div class="time">
+                            <p class="white">Seconds:</p>
+                            <input id="seconds-input" type="number" class="time-input" value="0" min="0" max="59" onchange="changeCountdownValues()">
+                        </div>
+
+                    </div>
+                    <h2 class="white paragraph">Competitor 1</h2>
+                    <div>
+                        <p class="white">Name:</p>
+                        <input type="text" onchange="refreshText('competitor1-name', this.value)">
+                    </div>
+                    <div>
+                        <p class="white">Team:</p>
+                        <input type="text" onchange="refreshText('competitor1-team', this.value)">
+                    </div>
+                    <div>
+                        <p class="white">Image:</p>
+                        <input class="white" type="file" accept="image/*" onchange="loadFile(event, 'competitor1')">
+                    </div>
+                    <h2 class="white paragraph">Competitor 2</h2>
+                    <div>
+                        <p class="white">Name:</p>
+                        <input type="text" onchange="refreshText('competitor2-name', this.value)">
+                    </div>
+                    <div>
+                        <p class="white">Team:</p>
+                        <input type="text" onchange="refreshText('competitor2-team', this.value)">
+                    </div>
+                    <div>
+                        <p class="white">Image:</p>
+                        <input class="white" type="file" accept="image/*" onchange="loadFile(event, 'competitor2')">
+                    </div>
+                </div>
+            </div>
+            <div class="clickable">
+                <h2 class="settings-text">SETTINGS</h2>
+            </div>
+        </div>
+        <div class="competition-container">
+            <div class="top-bar">
+                <img src="assets/NG_logos/logo_only.png" class="logo">
+                <h1 class="ng-blue">NEW GENERATION FIGHT TEAM COMPETITION</h1>
+            </div>
+            <div class="main-component">
+                <div class="competitors-container">
+                    <div class="competitor-display">
+                        <div class="image-container">
+                            <img id="competitor1" src="assets/no_image.png" class="image">
+                        </div>
+                        <div class="competitor-texts">
+                            <h2 id="competitor1-name" class="name ng-blue">Competitor1</h2>
+                            <h3 id="competitor1-team" class="team ng-blue">Team</h3>
+                        </div>
+                    </div>
+                    <div class="countdown-container">
+                        <div class="countdown">
+                            <h1 id="countdown-string" class="time-string ng-blue">05:00</h1>
+                        </div>
+                        <div class="buttons">
+                            <button type="button" id="startButton" class="button startButton" onclick="startCountDown()">Start</button>
+<!--                            <button id="stopButton" class="button stopButton"  onclick="stopCountDown()">Stop</button>-->
+                            <button class="button" onclick="resetCountDown()">Reset</button>
+                        </div>
+                    </div>
+                    <div class="competitor-display">
+                        <div class="image-container">
+                            <img id="competitor2" src="assets/no_image.png" class="image">
+                        </div>
+                        <div class="competitor-texts">
+                            <h2 id="competitor2-name" class="name ng-blue">Competitor2</h2>
+                            <h3 id="competitor2-team" class="team ng-blue">Team</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

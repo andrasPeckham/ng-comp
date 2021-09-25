@@ -1,0 +1,175 @@
+body{
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+}
+p{
+    margin: 0.5rem 0 0.5rem 0;
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+.outer-container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(314deg,#c9bfa5, #d9d8d2);
+}
+.ng-blue{
+    color: #263248;
+}
+.white{
+    color: white;
+}
+.competition-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sidebar{
+    display: flex;
+    position: fixed;
+    width: 330px;
+    left: -300px;
+    height: 100vh;
+    background: #263248;
+    box-shadow: 0 0 20px black;
+    transition: left 0.5s ease-in-out;
+}
+.sidebar:hover{
+    left: 0;
+}
+.settings{
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.clickable{
+    /*width: 2vw;*/
+    width: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.settings-text{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin: 0;
+    color: white;
+}
+.logo{
+    height: 10vh;
+}
+.top-bar{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-component{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time{
+    display: flex;
+    align-items: center;
+}
+.time-input{
+    margin: 0 1rem 0 1rem;
+    width: 3rem;
+    height: 1rem;
+}
+.info{
+    margin: 30px 0 30px 0;
+}
+.time-paragraph{
+    margin: 0;
+}
+.paragraph{
+    margin: 40px 0 0 0;
+}
+.competitor-display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.countdown{
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.countdown-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.time-container{
+
+}
+.time-string{
+    font-size: 10vw;
+    margin: 0;
+    width: 25vw;
+}
+.buttons{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    margin: 1rem;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #263248;
+    border: 1px solid black;
+    box-shadow: 0 0 5px #263248;
+    transition: 0.2s ease-in-out;
+    background: linear-gradient(314deg,#c9bfa5, #d9d8d2);
+}
+.button:hover{
+    box-shadow: 0 0 10px #263248;
+}
+.image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    height: 30vh;
+}
+.image{
+    max-width: 100%;
+    max-height: 100%;
+}
+.competitor-texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.name{
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+}
+.team{
+    margin: 0;
+}
+.competitors-container{
+    width: 90vw;
+    height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+}
