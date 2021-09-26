@@ -83,5 +83,9 @@ function stopCountDown(){
     }
 }
 function resetCountDown(){
-
+    if(countDownOn){
+        clearTimeout(timeout);
+        countDownOn = false;
+    }
+    changeCountdownValues();
 }
