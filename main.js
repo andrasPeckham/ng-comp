@@ -5,12 +5,15 @@ let timeInSeconds = 0;
 let timeout;
 let startButton = document.getElementsByClassName('startButton');
 let stopButton = document.getElementsByClassName('stopButton');
+
+let roundsTime = [];
+
 function loadFile(event, competitor) {
     let output = document.getElementById(competitor);
     output.src = URL.createObjectURL(event.target.files[0]);
     console.log(URL.createObjectURL(event.target.files[0]));
     output.onload = function() {
-        URL.revokeObjectURL(output.src) // free memory
+        URL.revokeObjectURL(output.src)
     }
 }
 function refreshText(id, value){
@@ -18,11 +21,7 @@ function refreshText(id, value){
     let text = document.getElementById(id);
     text.innerText = value;
 }
-// function changeCountdownValues(minutes, seconds){
-//     countdownMinutes = minutes;
-//     countdownSeconds = seconds;
-//     updateCountdownString();
-// }
+
 function changeCountdownValues(){
     countDownOn = false;
     countdownMinutes = document.getElementById('minute-input').value;
@@ -46,10 +45,6 @@ function calculateTimeFromSeconds(){
 }
 function startCountDown(){
     if(!countDownOn){
-        console.log(startButton.innerText );
-        startButton.innerText = "ASDASDAS";
-        console.log(startButton);
-        console.log(startButton.textContent );
         countdownMinutes = parseInt(countdownMinutes, 10);
         countdownSeconds = parseInt(countdownSeconds, 10);
         timeInSeconds = (countdownMinutes * 60) + countdownSeconds;

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>NG háziverseny</title>
+    <title>NG Competition</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="assets/NG_logos/logo.png">
+    <link rel="icon" href="assets/NG_logos/logo_white.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
@@ -25,8 +25,17 @@
                             <p class="white">Seconds:</p>
                             <input id="seconds-input" type="number" class="time-input" value="0" min="0" max="59" onchange="changeCountdownValues()">
                         </div>
-
                     </div>
+<!--                    <div class="time">-->
+<!--                        <div class="time">-->
+<!--                            <p class="white">Rounds:</p>-->
+<!--                            <input id="round-input" type="number" class="time-input" value="1" min="0" max="99" onchange="changeCountdownValues()">-->
+<!--                        </div>-->
+<!--                        <div class="time">-->
+<!--                            <p class="white">Break (sec):</p>-->
+<!--                            <input id="break-input" type="number" class="time-input" value="0" min="0" max="59" onchange="changeCountdownValues()">-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <h2 class="white paragraph">Competitor 1</h2>
                     <div>
                         <p class="white">Name:</p>
@@ -65,6 +74,9 @@
                 <h1 class="ng-blue">NEW GENERATION FIGHT TEAM COMPETITION</h1>
             </div>
             <div class="main-component">
+<!--                <div class="round-counter">-->
+<!--                    <h2 class="ng-blue">ROUND: 2</h2>-->
+<!--                </div>-->
                 <div class="competitors-container">
                     <div class="competitor-display">
                         <div class="image-container">
@@ -73,6 +85,7 @@
                         <div class="competitor-texts">
                             <h2 id="competitor1-name" class="name ng-blue">Competitor1</h2>
                             <h3 id="competitor1-team" class="team ng-blue">Team</h3>
+                            <div class="competitor-color color-blue"></div>
                         </div>
                     </div>
                     <div class="countdown-container">
@@ -92,6 +105,7 @@
                         <div class="competitor-texts">
                             <h2 id="competitor2-name" class="name ng-blue">Competitor2</h2>
                             <h3 id="competitor2-team" class="team ng-blue">Team</h3>
+                            <div class="competitor-color color-red"></div>
                         </div>
                     </div>
                 </div>

@@ -11,13 +11,28 @@ input:focus, textarea:focus, select:focus{
 .outer-container{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(314deg,#c9bfa5, #d9d8d2);
+    background: linear-gradient(314deg,#bbbdbe, #d9d8d2);
 }
 .ng-blue{
     color: #263248;
 }
+.break-color{
+    color: #41a130;
+}
 .white{
     color: white;
+}
+.competitor-color{
+    width: 60px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.color-blue{
+    background: #1919ce;
+}
+.color-red{
+    background: #ce1919;
 }
 .competition-container{
     width: 100vw;
@@ -49,7 +64,6 @@ input:focus, textarea:focus, select:focus{
     align-items: center;
 }
 .clickable{
-    /*width: 2vw;*/
     width: 30px;
     height: 100%;
     display: flex;
@@ -75,12 +89,14 @@ input:focus, textarea:focus, select:focus{
 .main-component{
     height: 70vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .time{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .time-input{
     margin: 0 1rem 0 1rem;
@@ -138,7 +154,7 @@ input:focus, textarea:focus, select:focus{
     border: 1px solid black;
     box-shadow: 0 0 5px #263248;
     transition: 0.2s ease-in-out;
-    background: linear-gradient(314deg,#c9bfa5, #d9d8d2);
+    background: linear-gradient(314deg,#bbbdbe, #d9d8d2);
 }
 .button:hover{
     box-shadow: 0 0 10px #263248;
@@ -151,9 +167,11 @@ input:focus, textarea:focus, select:focus{
     height: 30vh;
 }
 .image{
+    border-radius: 10px;
     max-width: 100%;
     max-height: 100%;
 }
+
 .competitor-texts{
     display: flex;
     flex-direction: column;
