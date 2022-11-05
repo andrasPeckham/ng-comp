@@ -1,40 +1,54 @@
-body{
+body {
     font-family: 'Oswald', sans-serif;
     margin: 0;
 }
-p{
+
+p {
     margin: 0.5rem 0 0.5rem 0;
 }
-input:focus, textarea:focus, select:focus{
+
+input:focus, textarea:focus, select:focus {
     outline: none;
 }
-.outer-container{
+
+input {
+    width: 100%;
+}
+
+.outer-container {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(314deg,#bbbdbe, #d9d8d2);
+    background: linear-gradient(314deg, #bbbdbe, #d9d8d2);
 }
-.ng-blue{
+
+.ng-blue {
     color: #263248;
 }
-.break-color{
+
+.break-color {
     color: #41a130;
 }
-.white{
+
+.white {
     color: white;
 }
-.competitor-color{
+
+.competitor-color {
     width: 60px;
     height: 30px;
     margin: 10px;
     border-radius: 5px;
 }
-.color-blue{
+
+.color-blue {
     background: #1919ce;
 }
-.color-red{
+
+.color-red {
     background: #ce1919;
 }
-.competition-container{
+
+.competition-container {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -42,7 +56,40 @@ input:focus, textarea:focus, select:focus{
     align-items: center;
     flex-direction: column;
 }
-.sidebar{
+
+.winner-overlay {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.modal {
+    background: linear-gradient(314deg, #bbbdbe, #d9d8d2);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(0 0 0 / 80%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+.winner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar {
     display: flex;
     position: fixed;
     width: 330px;
@@ -52,10 +99,12 @@ input:focus, textarea:focus, select:focus{
     box-shadow: 0 0 20px black;
     transition: left 0.5s ease-in-out;
 }
-.sidebar:hover{
+
+.sidebar:hover {
     left: 0;
 }
-.settings{
+
+.settings {
     width: 300px;
     height: 100%;
     display: flex;
@@ -63,61 +112,73 @@ input:focus, textarea:focus, select:focus{
     justify-content: center;
     align-items: center;
 }
-.clickable{
+
+.clickable {
     width: 30px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.settings-text{
+
+.settings-text {
     writing-mode: vertical-rl;
     text-orientation: upright;
     margin: 0;
     color: white;
 }
-.logo{
+
+.logo {
     height: 10vh;
 }
-.top-bar{
+
+.top-bar {
     height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.main-component{
-    height: 70vh;
+
+.main-component {
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.time{
+
+.time {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.time-input{
+
+.time-input {
     margin: 0 1rem 0 1rem;
     width: 3rem;
     height: 1rem;
 }
-.info{
+
+.info {
     margin: 30px 0 30px 0;
 }
-.time-paragraph{
+
+.time-paragraph {
     margin: 0;
 }
-.paragraph{
+
+.paragraph {
     margin: 40px 0 0 0;
 }
-.competitor-display{
+
+.competitor-display {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.countdown{
+
+.countdown {
     width: 30vw;
     height: 30vh;
     display: flex;
@@ -125,26 +186,32 @@ input:focus, textarea:focus, select:focus{
     align-items: center;
     text-align: center;
 }
-.countdown-container{
+
+.countdown-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.time-container{
+
+.time-container {
 
 }
-.time-string{
+
+.time-string {
     font-size: 10vw;
     margin: 0;
     width: 25vw;
 }
-.buttons{
+
+.buttons {
     margin-top: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.button{
+
+.button {
+    cursor: pointer;
     margin: 1rem;
     padding: 0.5rem 2rem 0.5rem 2rem;
     font-family: 'Oswald', sans-serif;
@@ -154,40 +221,80 @@ input:focus, textarea:focus, select:focus{
     border: 1px solid black;
     box-shadow: 0 0 5px #263248;
     transition: 0.2s ease-in-out;
-    background: linear-gradient(314deg,#bbbdbe, #d9d8d2);
+    background: linear-gradient(314deg, #bbbdbe, #d9d8d2);
 }
-.button:hover{
+
+.button:hover {
     box-shadow: 0 0 10px #263248;
 }
-.image-container{
+
+.reset-button {
+    margin: 20px 0;
+    box-shadow: 0 0 5px #646464;
+}
+
+.reset-button:hover {
+    box-shadow: 0 0 10px #646464;
+}
+
+.winner-button {
+    opacity: 0.5;
+    border: 1px solid transparent;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.winner-button:hover {
+    opacity: 1;
+    border: 1px solid #9f7002;
+    /*box-shadow: 0 0 10px #9f7002;*/
+}
+
+.winner-svg {
+    width: 30px;
+    height: 30px;
+}
+
+.image-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 30vw;
     height: 30vh;
 }
-.image{
+
+.image {
     border-radius: 10px;
     max-width: 100%;
     max-height: 100%;
 }
 
-.competitor-texts{
+.competitor-texts {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.name{
+
+.name {
     margin-bottom: 0;
     margin-top: 1.5rem;
 }
-.team{
+
+.team {
     margin: 0;
 }
-.competitors-container{
+
+.competitors-container {
     width: 90vw;
-    height: 50vh;
+    min-height: 50vh;
     display: flex;
     justify-content: space-evenly;
 }
