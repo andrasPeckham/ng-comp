@@ -104,6 +104,11 @@ function resetSettings() {
     comp1.src = 'assets/no_image.png';
     comp2.src = 'assets/no_image.png';
 
+    refreshText(Texts.COMPETITOR1_NAME, 'Competitor1');
+    refreshText(Texts.COMPETITOR2_NAME, 'Competitor2');
+    refreshText(Texts.COMPETITOR1_TEAM, 'Team');
+    refreshText(Texts.COMPETITOR2_TEAM, 'Team');
+
     imageUrls.forEach(url => {
         URL.revokeObjectURL(url);
     })
