@@ -89,6 +89,10 @@ input {
     flex-direction: column;
 }
 
+.winner-text {
+    font-size: 40px;
+}
+
 .sidebar {
     display: flex;
     position: fixed;
@@ -284,11 +288,13 @@ input {
 }
 
 .name {
+    font-size: 40px;
     margin-bottom: 0;
     margin-top: 1.5rem;
 }
 
 .team {
+    font-size: 30px;
     margin: 0;
 }
 
